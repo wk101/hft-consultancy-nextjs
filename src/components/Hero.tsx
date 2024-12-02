@@ -15,10 +15,16 @@ const Hero: React.FC = () => {
     >
       {/* Left Column: Text Content */}
       <div className="flex-1 flex flex-col justify-center pr-8">
-        <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
+        <h1
+          className="text-5xl font-extrabold text-gray-900 mb-4 animate-fade-slide-in-delay"
+          style={{ animationDelay: "0.3s" }} // Optional: add a delay for more effect
+        >
           <strong>What We Do:</strong> High-Performance Trading Solutions
         </h1>
-        <p className="text-lg text-gray-700 mb-6">
+        <p
+          className="text-lg text-gray-700 mb-6 animate-fade-slide-in-delay"
+          style={{ animationDelay: "0.5s" }} // Optional: add a delay for more effect
+        >
           <strong>How We Can Help You:</strong> By delivering accelerators,
           ultra-low latency solutions, and financial models, we empower your
           trading systems with unmatched efficiency.

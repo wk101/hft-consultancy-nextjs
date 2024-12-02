@@ -1,6 +1,5 @@
-"use client"
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
+import Grid from "@/components/client/Grid";
 
 const workItems = [
   {
@@ -41,68 +40,14 @@ const workItems = [
   },
 ];
 
+// Duplicating items to reach 9 cards
+const demoWorkItems = Array.from({ length: 9 }, (_, index) => workItems[index % workItems.length]);
+
 const RecentWork: React.FC = () => {
-  const [expandedWork, setExpandedWork] = useState<number | null>(null);
-
-  const closeExpandedView = () => setExpandedWork(null);
-
   return (
-    <section className="ml-64 bg-white p-10 relative">
+    <section id="recent-work" className="ml-64 bg-white p-10 relative">
       <h2 className="text-3xl text-black font-bold mb-6">Recent Work</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {workItems.map((item, index) => (
-          <div
-            key={index}
-            className={`relative bg-gray-100 rounded shadow overflow-hidden ${
-              expandedWork === index
-                ? "col-span-full z-20 animate-scaleIn"
-                : "hover:shadow-lg"
-            }`}
-            onClick={() => setExpandedWork(expandedWork === index ? null : index)}
-          >
-            {/* Image */}
-            <div
-              className={`relative ${
-                expandedWork === index
-                  ? "h-[400px] transition-all duration-500"
-                  : "h-[150px] hover:brightness-75"
-              }`}
-            >
-              <Image
-                src={expandedWork === index ? item.largeImage : item.thumbnail}
-                alt={item.metaDescription}
-                fill
-                className="object-cover"
-              />
-              {/* View Button */}
-              {expandedWork !== index && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
-                  <span className="text-white text-sm border border-white/50 px-4 py-2 rounded">
-                    View
-                  </span>
-                </div>
-              )}
-            </div>
-
-            {/* Text */}
-            <div
-              className={`p-4 transition-opacity duration-300 ${
-                expandedWork === index ? "text-black" : "text-gray-800"
-              }`}
-            >
-              <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p className="text-sm">{item.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-      {/* Overlay */}
-      {expandedWork !== null && (
-        <div
-          className="fixed inset-0 bg-black/50 z-10"
-          onClick={closeExpandedView}
-        ></div>
-      )}
+      <Grid items={demoWorkItems} />
     </section>
   );
 };

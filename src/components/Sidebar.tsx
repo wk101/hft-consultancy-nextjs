@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import { FaLinkedin, FaTwitter, FaYoutube, FaGithub } from "react-icons/fa";
 
 const Sidebar: React.FC = () => {
@@ -7,27 +8,39 @@ const Sidebar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
+    // Debounce function to limit scroll events
+    let timeout: NodeJS.Timeout;
+    
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
 
-      // Determine active section
+      // Debounce the scroll to optimize performance
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        updateActiveSection(window.scrollY);
+      }, 100);
+    };
+
+    const updateActiveSection = (scrollPos: number) => {
       const sections = ["hero", "recent-work", "experience", "contact"];
       const offsets = sections.map((id) => ({
         id,
         offset: document.getElementById(id)?.offsetTop || 0,
       }));
+
       const active = offsets.find(
         (section, index) =>
-          scrollPosition >= section.offset &&
-          (index === offsets.length - 1 || scrollPosition < offsets[index + 1].offset)
+          scrollPos >= section.offset &&
+          (index === offsets.length - 1 || scrollPos < offsets[index + 1]?.offset)
       );
       setActiveSection(active?.id || "");
     };
 
     window.addEventListener("scroll", handleScroll);
-
+    
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeout); // Clear timeout on cleanup
     };
   }, [scrollPosition]);
 

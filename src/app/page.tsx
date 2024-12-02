@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import RecentWork from "../components/RecentWork";
 import Experience from "../components/Experience";
 import Contact from "../components/Contact";
-import Accordion from "@/components/Accordian";
+import WhatWeDoSection from "@/components/WhatWeDoSection";
 
 const Home: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
       {/* Main Content */}
       <main className="flex-1 bg-gray-100 overflow-hidden">
   <Hero />
-  <Accordion />
+  <WhatWeDoSection />
   <RecentWork />
   <Experience />
   <Contact />

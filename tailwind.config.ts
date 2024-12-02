@@ -1,6 +1,5 @@
-import type { Config } from "tailwindcss";
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,7 +7,18 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: "640px",  // Small devices (e.g., phones)
+        md: "768px",  // Medium devices (e.g., tablets)
+        lg: "1024px", // Large devices (e.g., laptops)
+        xl: "1280px", // Extra large devices (e.g., desktops)
+        "2xl": "1536px", // Ultra-wide monitors
+      },
       keyframes: {
+        fadeInScale: {
+          "0%": { opacity: "0", transform: "scale(0.9)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
@@ -23,13 +33,22 @@ export default {
         },
       },
       animation: {
-        "fade-slide-in": "fadeSlideIn 3s ease-out forwards", // Add forwards
-        "fade-slide-in-delay": "fadeSlideIn 3s ease-out 0.5s forwards", // Add forwards
-        "fadeIn": "fadeIn 0.5s ease-in-out",
-        "scaleIn": "scaleIn 0.5s ease-in-out",
-      
+        fadeInScale: "fadeInScale 3s ease-out forwards",
+        "fade-slide-in": "fadeSlideIn 3s ease-out forwards",
+        "fade-slide-in-delay": "fadeSlideIn 3s ease-out 0.5s forwards",
+        fadeIn: "fadeIn 0.5s ease-in-out",
+        scaleIn: "scaleIn 0.5s ease-in-out",
+      },
+      colors: {
+        primary: "#1d4ed8", // Tailwind Blue
+        secondary: "#9333ea", // Tailwind Purple
+        neutral: {
+          light: "#f3f4f6",
+          DEFAULT: "#e5e7eb",
+          dark: "#374151",
+        },
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
