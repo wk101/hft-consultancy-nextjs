@@ -7,13 +7,11 @@ import Accordion from "@/components/client/Accordion"; // Import Accordion compo
 const accordionItems = [
   {
     title: "IP Core Development",
-    content: `
-      Our team specializes in designing and optimizing IP cores to ensure unmatched 
+    content: `Our team specializes in designing and optimizing IP cores to ensure unmatched 
       performance for high-frequency trading systems. By leveraging our expertise, 
       we provide tailored solutions that enhance processing efficiency, reduce latency, 
       and improve overall throughput. Our IP cores are tested and validated for 
-      compatibility with the latest FPGA technologies, ensuring seamless integration.
-    `,
+      compatibility with the latest FPGA technologies, ensuring seamless integration.`,
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -33,11 +31,9 @@ const accordionItems = [
   },
   {
     title: "Custom PCB Design",
-    content: `
-      In-house custom PCB design is critical to achieving cost-effective solutions 
+    content: `In-house custom PCB design is critical to achieving cost-effective solutions 
       without compromising on performance. Our advanced PCB designs are engineered 
-      for low-latency data processing, power efficiency, and thermal stability.
-    `,
+      for low-latency data processing, power efficiency, and thermal stability.`,
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -57,11 +53,9 @@ const accordionItems = [
   },
   {
     title: "Security Enhancements",
-    content: `
-      With the ever-growing threat landscape, securing your trading infrastructure 
+    content: `With the ever-growing threat landscape, securing your trading infrastructure 
       is our top priority. We implement advanced security protocols and intrusion 
-      detection systems to protect your data.
-    `,
+      detection systems to protect your data.`,
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -81,11 +75,9 @@ const accordionItems = [
   },
   {
     title: "Network Optimization",
-    content: `
-      Network performance is a cornerstone of efficient trading operations. 
+    content: `Network performance is a cornerstone of efficient trading operations. 
       We optimize networks for ultra-low latency by implementing advanced 
-      networking techniques.
-    `,
+      networking techniques.`,
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -105,11 +97,9 @@ const accordionItems = [
   },
   {
     title: "HFT Strategy Modeling",
-    content: `
-      Success in high-frequency trading requires precision and adaptability. 
+    content: `Success in high-frequency trading requires precision and adaptability. 
       Our modeling services include the development and backtesting of 
-      complex trading algorithms tailored to your needs.
-    `,
+      complex trading algorithms tailored to your needs.`,
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -131,8 +121,8 @@ const accordionItems = [
 
 const WhatWeDoSection: React.FC = () => {
   return (
-    <section id="what-we-do" className="ml-64 p-10 bg-gray-100">
-      <h2 className="text-3xl font-bold text-black mb-6">What We Do</h2>
+    <section id="what-we-do" className="px-6 text-center sm:px-12 lg:px-16 py-10 bg-gray-100">
+      <h2 className="text-3xl font-bold text-black mb-4">What We Do</h2>
       <p className="text-lg text-black mb-4">
         At HFT Consultancy, we specialize in providing industry-leading solutions tailored to the 
         needs of high-frequency trading (HFT). With expertise in hardware design, software development, 

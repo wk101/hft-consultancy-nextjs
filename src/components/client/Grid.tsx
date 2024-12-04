@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Card from "./Card";
+import CardThumbnail from "./CardThumbnail";
+import CardExpanded from "./CardExpanded";
 
 interface GridProps {
   items: {
@@ -16,30 +17,29 @@ interface GridProps {
 const Grid: React.FC<GridProps> = ({ items }) => {
   const [expandedWork, setExpandedWork] = useState<number | null>(null);
 
-  const closeExpandedView = () => setExpandedWork(null);
-
   return (
     <div className="relative">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Grid Layout */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {items.map((item, index) => (
-          <Card
+          <CardThumbnail
             key={index}
             title={item.title}
-            description={item.description}
             metaDescription={item.metaDescription}
             thumbnail={item.thumbnail}
-            largeImage={item.largeImage}
-            isExpanded={expandedWork === index}
-            onClick={() => setExpandedWork(expandedWork === index ? null : index)}
+            onClick={() => setExpandedWork(index)}
           />
         ))}
       </div>
-      {/* Overlay */}
+
+      {/* Expanded Card */}
       {expandedWork !== null && (
-        <div
-          className="fixed inset-0 bg-black/50 z-10"
-          onClick={closeExpandedView}
-        ></div>
+        <CardExpanded
+          title={items[expandedWork].title}
+          description={items[expandedWork].description}
+          largeImage={items[expandedWork].largeImage}
+          onClose={() => setExpandedWork(null)}
+        />
       )}
     </div>
   );

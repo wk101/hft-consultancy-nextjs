@@ -15,17 +15,20 @@ const images = [
   {
     src: "/office3.jpg",
     alt: "Picture of a meeting room with a large flat screen",
-    description:
-      "A meeting room featuring a large flat screen at the Santo Domingo office.",
+    description: "A meeting room featuring a large flat screen at the Santo Domingo office.",
   },
 ];
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="ml-64 bg-gray-100 p-10">
-      <h2 className="text-3xl text-black font-bold mb-6">
+    <section id="experience" className="px-6 sm:px-12 lg:px-16 py-10 bg-gray-100 flex flex-col items-center text-center">
+      <h2 className="text-3xl font-bold text-black mb-4">
         Experience Our Office Space
       </h2>
+      <ul className="list-disc list-inside text-gray-700 mb-6">
+        <li>24-Hour Security for Peace of Mind</li>
+        <li>Highly Available Internet Connectivity</li>
+      </ul>
       <Carousel images={images} />
     </section>
   );

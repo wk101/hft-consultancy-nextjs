@@ -6,51 +6,38 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative flex px-16"
+      className="relative flex flex-col md:flex-row items-center max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-16"
       style={{
-        height: "95vh", // Full viewport height
-        marginLeft: "16rem", // Matches the sidebar width
-        background: "linear-gradient(to right, #ffffff, #f9fafb)", // Subtle gradient background
+        height: "100vh", // Full viewport height
+        background: "linear-gradient(to right, #ffffff, #f9fafb)", // Subtle gradient
       }}
     >
       {/* Left Column: Text Content */}
-      <div className="flex-1 flex flex-col justify-center pr-8">
-        <h1
-          className="text-5xl font-extrabold text-gray-900 mb-4 animate-fade-slide-in-delay"
-          style={{ animationDelay: "0.3s" }} // Optional: add a delay for more effect
-        >
-          <strong>What We Do:</strong> High-Performance Trading Solutions
+      <div className="flex-1 flex flex-col justify-center md:pr-8 text-center md:text-left">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+          What We Do: <br className="hidden sm:block" />
+          High-Performance Trading Solutions
         </h1>
-        <p
-          className="text-lg text-gray-700 mb-6 animate-fade-slide-in-delay"
-          style={{ animationDelay: "0.5s" }} // Optional: add a delay for more effect
-        >
-          <strong>How We Can Help You:</strong> By delivering accelerators,
-          ultra-low latency solutions, and financial models, we empower your
-          trading systems with unmatched efficiency.
+        <p className="text-lg sm:text-xl text-gray-700 mb-6 leading-relaxed">
+          By delivering accelerators, ultra-low latency solutions, and financial models, 
+          we empower your trading systems with unmatched efficiency.
         </p>
-        <button
-          className="px-6 py-3 text-lg font-semibold rounded-lg transition flex items-center space-x-2"
-          style={{
-            background: "linear-gradient(to right, #004aad, #00c9ff)", // Blue gradient
-            color: "white",
-          }}
-        >
-          <span>Learn More</span>
-          <span className="text-xl">&rarr;</span>
-        </button>
+        <div className="flex justify-center md:justify-start">
+          <button className="px-6 py-3 text-lg font-semibold rounded-lg transition bg-blue-600 text-white hover:bg-blue-700">
+            Learn More &rarr;
+          </button>
+        </div>
       </div>
 
       {/* Right Column: Image */}
-      <div
-        className="flex-1 h-full bg-cover bg-center"
-        style={{
-          backgroundImage: `url('/hero_pic.png')`, // Background image
-          backgroundSize: "cover", // Ensures the image covers the entire div
-          backgroundRepeat: "no-repeat", // Prevents repeating
-          backgroundPosition: "center", // Centers the image
-        }}
-      ></div>
+      <div className="flex-1 h-full">
+        <div
+          className="w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url('/hero_pic.png')`, // Set the image
+          }}
+        ></div>
+      </div>
     </section>
   );
 };

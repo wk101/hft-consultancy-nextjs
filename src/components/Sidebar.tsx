@@ -1,22 +1,22 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { FaLinkedin, FaTwitter, FaYoutube, FaGithub } from "react-icons/fa";
+import React, { useState, useEffect, useRef } from "react";
+import { FaLinkedin, FaTwitter, FaYoutube, FaGithub, FaBars } from "react-icons/fa";
 
 const Sidebar: React.FC = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [activeSection, setActiveSection] = useState<string>("");
+  const [scrollPosition, setScrollPosition] = useState<number>(0);
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true); // To manage sidebar visibility on small screens
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    // Debounce function to limit scroll events
-    let timeout: NodeJS.Timeout;
-    
     const handleScroll = () => {
+      // Update scroll position
       setScrollPosition(window.scrollY);
 
-      // Debounce the scroll to optimize performance
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
+      // Debounce scroll event to optimize performance
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => {
         updateActiveSection(window.scrollY);
       }, 100);
     };
@@ -37,16 +37,22 @@ const Sidebar: React.FC = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      clearTimeout(timeout); // Clear timeout on cleanup
+      if (timeoutRef.current) clearTimeout(timeoutRef.current); // Clear timeout on cleanup
     };
-  }, [scrollPosition]);
+  }, []);
+
+  // Toggle sidebar visibility for mobile
+  const toggleSidebar = () => {
+    setIsSidebarOpen((prevState) => !prevState);
+  };
 
   return (
     <div
-      className="fixed h-screen w-64 text-white p-6 flex flex-col items-center"
+      className={`fixed top-0 left-0 h-screen p-6 flex flex-col items-center text-white transition-all duration-300 
+      ${isSidebarOpen ? "w-64" : "w-16"}`} // Control width of sidebar
       style={{
         background: `linear-gradient(to bottom, #1F2937, #111827 ${50 + scrollPosition * 0.05}%)`,
       }}
@@ -73,6 +79,7 @@ const Sidebar: React.FC = () => {
                 ? "text-blue-400 bg-gray-800"
                 : "hover:text-blue-400 hover:bg-gray-700 hover:shadow-lg"
             }`}
+            aria-label={item.label}
           >
             {item.label}
           </a>

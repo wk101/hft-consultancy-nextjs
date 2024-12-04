@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Grid from "@/components/client/Grid";
 
 const workItems = [
@@ -40,16 +40,18 @@ const workItems = [
   },
 ];
 
-// Duplicating items to reach 9 cards
-const demoWorkItems = Array.from({ length: 9 }, (_, index) => workItems[index % workItems.length]);
-
 const RecentWork: React.FC = () => {
+  
+  const demoWorkItems = Array.from({ length: 9 }, (_, index) => workItems[index % workItems.length]);
+
+
   return (
-    <section id="recent-work" className="ml-64 bg-white p-10 relative">
-      <h2 className="text-3xl text-black font-bold mb-6">Recent Work</h2>
+    <section id="recent-work" className="bg-white p-10 relative">
+      <h2 className="text-3xl text-black text-center font-bold mb-6">Recent Work</h2>
       <Grid items={demoWorkItems} />
     </section>
   );
 };
+
 
 export default RecentWork;

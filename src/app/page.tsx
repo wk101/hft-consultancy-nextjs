@@ -1,5 +1,4 @@
-// pages/index.tsx
-import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import RecentWork from "../components/RecentWork";
 import Experience from "../components/Experience";
@@ -8,21 +7,21 @@ import WhatWeDoSection from "@/components/WhatWeDoSection";
 
 const Home: React.FC = () => {
   return (
-    <div className="flex">
-      {/* Sidebar */}
-      <Sidebar />
+    <div className="flex flex-col">
+      {/* Navbar */}
+      <Navbar />
 
       {/* Main Content */}
-      <main className="flex-1 bg-gray-100 overflow-hidden">
-  <Hero />
-  <WhatWeDoSection />
-  <RecentWork />
-  <Experience />
-  <Contact />
-</main>
-     </div>
+      <main className="pt-16 bg-gray-100 overflow-hidden w-full">
+        {/* Adjust the Hero section and other content */}
+        <Hero />
+        <WhatWeDoSection />
+        <RecentWork />
+        <Experience />
+        <Contact />
+      </main>
+    </div>
   );
 };
 
 export default Home;
-
