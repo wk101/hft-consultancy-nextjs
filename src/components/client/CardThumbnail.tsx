@@ -7,7 +7,6 @@ interface CardThumbnailProps {
   title: string;
   metaDescription: string;
   thumbnail: string;
-  badge?: string; // Badge text for high-value projects
   onClick: () => void;
 }
 
@@ -15,7 +14,6 @@ const CardThumbnail: React.FC<CardThumbnailProps> = ({
   title,
   metaDescription,
   thumbnail,
-  badge,
   onClick,
 }) => {
   return (
