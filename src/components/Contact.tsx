@@ -15,8 +15,8 @@ const Contact: React.FC = () => {
       <h2 className="text-3xl text-black font-bold text-center mb-4">Get In Touch</h2>
       <p className="text-gray-700 text-center mb-6">
         Have a question, need a consultation, or want to discuss your requirements? 
-        Fill out the form below or use the provided contact details, and we'll get back to you 
-        within 24 hours on working days. We're here to help you achieve your goals with cutting-edge solutions.
+        Fill out the form below or use the provided contact details, and we will get back to you 
+        within 24 hours on working days. Were here to help you achieve your goals with cutting-edge solutions.
       </p>
 
       {/* Container with Subtle Background */}
