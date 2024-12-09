@@ -23,7 +23,7 @@ const CardExpanded: React.FC<CardExpandedProps> = ({
     >
       <div
         className="bg-white rounded-lg shadow-lg max-w-3xl w-full p-6 relative"
-        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+        onClick={(e) => e.stopPropagation()} // Prevents closing the modal when clicking inside it
       >
         {/* Close Button */}
         <button

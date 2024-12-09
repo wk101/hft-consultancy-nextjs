@@ -7,6 +7,7 @@ interface CardThumbnailProps {
   title: string;
   metaDescription: string;
   thumbnail: string;
+  badge?: string; // Badge text for high-value projects
   onClick: () => void;
 }
 
@@ -14,27 +15,32 @@ const CardThumbnail: React.FC<CardThumbnailProps> = ({
   title,
   metaDescription,
   thumbnail,
+  badge,
   onClick,
 }) => {
   return (
     <div
-      className="relative bg-gray-100 rounded shadow hover:shadow-lg cursor-pointer"
+      className="relative bg-white border border-gray-300 rounded-lg shadow-sm hover:shadow-md transform hover:scale-105 transition-transform duration-200 cursor-pointer"
       onClick={onClick}
-      style={{ width: "200px", height: "250px" }} // Adjusted size
+      style={{ width: "220px", height: "160px" }} // Adjusted height while keeping width intact
     >
-      {/* Thumbnail Image */}
-      <div className="relative h-[150px]">
+      
+
+      {/* Card Image */}
+      <div className="relative w-full h-[120px]"> {/* Adjusted image height */}
         <Image
           src={thumbnail}
           alt={metaDescription}
           fill
-          className="object-cover rounded-t"
+          className="object-contain p-2 rounded-t-lg"
         />
       </div>
 
       {/* Title */}
       <div className="p-2">
-        <h3 className="text-sm font-semibold text-gray-800">{title}</h3>
+        <h3 className="text-center text-sm font-semibold text-gray-800">
+          {title}
+        </h3>
       </div>
     </div>
   );
