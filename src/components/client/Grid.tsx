@@ -11,6 +11,7 @@ interface GridProps {
     metaDescription: string;
     thumbnail: string;
     largeImage: string;
+    badge?: string; // Optional badge property
   }[];
 }
 
@@ -18,15 +19,16 @@ const Grid: React.FC<GridProps> = ({ items }) => {
   const [expandedWork, setExpandedWork] = useState<number | null>(null);
 
   return (
-    <div className="relative">
+    <div className="relative px-4 sm:px-8 lg:px-12">
       {/* Grid Layout */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3"> {/* Tighter gaps */}
         {items.map((item, index) => (
           <CardThumbnail
             key={index}
             title={item.title}
             metaDescription={item.metaDescription}
             thumbnail={item.thumbnail}
+            badge={item.badge} // Pass badge property
             onClick={() => setExpandedWork(index)}
           />
         ))}
