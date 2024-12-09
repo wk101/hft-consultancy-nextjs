@@ -28,7 +28,6 @@ const Grid: React.FC<GridProps> = ({ items }) => {
             title={item.title}
             metaDescription={item.metaDescription}
             thumbnail={item.thumbnail}
-            badge={item.badge} // Pass badge property
             onClick={() => setExpandedWork(index)}
           />
         ))}
