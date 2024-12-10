@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /drafts
+
+# Host
+Host: https://hftconsultancy.com
+
+# Sitemaps
+Sitemap: https://hftconsultancy.com/sitemap.xml

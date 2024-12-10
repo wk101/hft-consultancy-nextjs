@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* SEO Metadata */}
-        <title>HFT Consultancy</title>
+        <title>High-Frequency Trading Solutions | HFT Consultancy</title>
         <meta
           name="description"
           content="Delivering industry-leading solutions for high-frequency trading (HFT) with expertise in ultra-low latency, financial modeling, IP core optimization, and trading lifecycle management."
@@ -57,6 +57,21 @@ export default function RootLayout({
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "HFT Consultancy",
+              "url": "https://hftconsultancy.com",
+              "logo": "https://hftconsultancy.com/favicon.ico",
+              "sameAs": ["https://linkedin.com/in/hft-quant"],
+            }),
+          }}
+        ></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

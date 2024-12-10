@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import HeroInteractive from "./client/HeroInteractive"; // Import client component
 
 const Hero: React.FC = () => {
   return (
@@ -12,8 +11,10 @@ const Hero: React.FC = () => {
         background: "linear-gradient(to right, #ffffff, #f9fafb)", // Subtle gradient
       }}
     >
-      {/* Left Column: Text Content */}
-      <div className="flex-1 flex flex-col justify-center md:pr-8 text-center md:text-left">
+      {/* Left Column: Static Text Content */}
+      <div
+        className="flex-1 flex flex-col justify-center md:pr-8 text-center md:text-left animate-fade-in-left"
+      >
         <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
           What We Do: <br className="hidden sm:block" />
           High-Performance Trading Solutions
@@ -22,17 +23,14 @@ const Hero: React.FC = () => {
           By delivering accelerators, ultra-low latency solutions, and financial models, 
           we empower your trading systems with unmatched efficiency.
         </p>
-        <div className="flex justify-center md:justify-start">
-        <a href="#experience">
-          <button className="px-6 py-3 text-lg font-semibold rounded-lg transition bg-blue-600 text-white hover:bg-blue-700">
-            Learn More &rarr;
-          </button>
-        </a>
-        </div>
+        {/* Delegate interactive button to client component */}
+        <HeroInteractive />
       </div>
 
       {/* Right Column: Image */}
-      <div className="flex-1 h-full">
+      <div
+        className="flex-1 h-full animate-fade-in"
+      >
         <div
           className="w-full h-full bg-cover bg-center"
           style={{

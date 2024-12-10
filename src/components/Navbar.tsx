@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import BurgerBar from "./BurgerBar";
+import BurgerBar from "./client/BurgerBar";
 import Menu from "./Menu";
 import SocialMediaLinks from "./SocialMediaLinks";
 
