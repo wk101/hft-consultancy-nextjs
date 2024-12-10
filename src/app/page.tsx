@@ -4,7 +4,8 @@ import RecentWork from "../components/RecentWork";
 import Experience from "../components/Experience";
 import Contact from "../components/Contact";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
-
+import  HjbMarketMaking from "@/components/HjbMarketMaking";
+ 
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
         {/* Adjust the Hero section and other content */}
         <Hero />
         <WhatWeDoSection />
+        <HjbMarketMaking />
         <RecentWork />
         <Experience />
         <Contact />

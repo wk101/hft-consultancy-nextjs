@@ -23,9 +23,11 @@ const Hero: React.FC = () => {
           we empower your trading systems with unmatched efficiency.
         </p>
         <div className="flex justify-center md:justify-start">
+        <a href="#experience">
           <button className="px-6 py-3 text-lg font-semibold rounded-lg transition bg-blue-600 text-white hover:bg-blue-700">
             Learn More &rarr;
           </button>
+        </a>
         </div>
       </div>
 
