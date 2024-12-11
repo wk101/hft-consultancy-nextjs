@@ -1,7 +1,6 @@
-"use client";
-
 import React from "react";
 import Accordion from "@/components/client/Accordion"; // Import Accordion component
+import  TradingCards from "@/components/TradingCards";
 
 // Accordion data that will be passed down
 const accordionItems = [
@@ -10,8 +9,8 @@ const accordionItems = [
     content: `Our team specializes in designing and optimizing IP cores to ensure unmatched 
       performance for high-frequency trading systems. By leveraging our expertise, 
       we provide tailored solutions that enhance processing efficiency, reduce latency, 
-      and improve overall throughput. Our IP cores are tested and validated for 
-      compatibility with the latest FPGA technologies, ensuring seamless integration.`,
+      and improve overall throughput. Our IP cores are tested and validated by Experienced Electrical Engineers for 
+      compatibility with the latest FPGA technologies.`,
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -31,9 +30,11 @@ const accordionItems = [
   },
   {
     title: "Custom PCB Design",
-    content: `In-house custom PCB design is critical to achieving cost-effective solutions 
-      without compromising on performance. Our advanced PCB designs are engineered 
-      for low-latency data processing, power efficiency, and thermal stability.`,
+    content: `Custom PCB Design for High-Frequency Trading: Cost-Effective and High-Performance Solutions
+
+At HFT Consultancy, we specialize in in-house custom PCB design tailored to the unique demands of high-frequency trading (HFT). While FPGAs offer unparalleled speed, our advanced PCB solutions provide a cost-effective alternative without sacrificing performance. Our designs are optimized for low-latency data processing, ensuring rapid signal transmission for ultra-fast trades; power efficiency, minimizing energy consumption; and thermal stability.
+
+Discover how our PCB designs help reduce costs while meeting the rigorous requirements of HFT systems.`,
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -122,13 +123,15 @@ const accordionItems = [
 const WhatWeDoSection: React.FC = () => {
   return (
     <section id="what-we-do" className="px-6 text-center sm:px-12 lg:px-16 py-10 bg-gray-100">
-      <h2 className="text-3xl font-bold text-black mb-4">What We Do</h2>
-      <p className="text-lg text-black mb-4">
-        At HFT Consultancy, we specialize in providing industry-leading solutions tailored to the 
-        needs of high-frequency trading (HFT). With expertise in hardware design, software development, 
-        and system optimization, our team helps you achieve unmatched performance and efficiency. 
-        Our core offerings include:
-      </p>
+      <h2 className="text-3xl font-bold text-black mb-4">Core Expertise: Trading Algorithm Development</h2>
+  
+  
+<p className="mt-4 text-black">
+    Our expertise spans across <strong>All Asset Classes</strong>, including equities, derivatives, forex, and <strong>cryptocurrency markets</strong>. 
+    We deliver robust, scalable, and high-performance solutions tailored to the specific requirements of each client.
+</p>
+<TradingCards/>
+<h2 className="text-3xl font-bold text-black mb-4">High-Frequency Trading: What We Offer</h2>
       <Accordion items={accordionItems} /> {/* Pass data to Accordion component */}
     </section>
   );

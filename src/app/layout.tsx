@@ -26,10 +26,9 @@ export default function RootLayout({
           name="description"
           content="Delivering industry-leading solutions for high-frequency trading (HFT) with expertise in ultra-low latency, financial modeling, IP core optimization, and trading lifecycle management."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="keywords"
-          content="HFT, high-frequency trading, ultra-low latency, financial modeling, IP core optimization, trading lifecycle management, FPGA, network optimization, quant development"
+          content="HFT, HFT Trading, high-frequency trading, ultra-low latency, financial modeling, IP core optimization, trading lifecycle management, FPGA, network optimization, quant development"
         />
 
         {/* Open Graph Metadata */}

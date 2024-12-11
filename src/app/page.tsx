@@ -5,7 +5,8 @@ import Experience from "../components/Experience";
 import Contact from "../components/Contact";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
 import  HjbMarketMaking from "@/components/HjbMarketMaking";
- 
+import Tech from "@/components/Tech";
+
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
       <main className="pt-16 bg-gray-100 overflow-hidden w-full">
         {/* Adjust the Hero section and other content */}
         <Hero />
+        <Tech />
         <WhatWeDoSection />
         <HjbMarketMaking />
         <RecentWork />
