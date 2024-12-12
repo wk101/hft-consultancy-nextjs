@@ -83,7 +83,7 @@ const RecentWork: React.FC = () => {
 
 
   return (
-    <section id="recent-work" className="bg-white p-10 relative">
+    <section id="recent-work" className="bg-white max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-16 py-10">
       <h2 className="text-3xl text-black text-center font-bold mb-6">Recent Work</h2>
       <Grid items={demoWorkItems} />
     </section>

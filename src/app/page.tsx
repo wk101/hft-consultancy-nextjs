@@ -6,6 +6,7 @@ import Contact from "../components/Contact";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
 import  HjbMarketMaking from "@/components/HjbMarketMaking";
 import Tech from "@/components/Tech";
+import Footer from "@/components/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -17,12 +18,13 @@ const Home: React.FC = () => {
       <main className="pt-16 bg-gray-100 overflow-hidden w-full">
         {/* Adjust the Hero section and other content */}
         <Hero />
-        <Tech />
         <WhatWeDoSection />
+        <Tech />
         <HjbMarketMaking />
         <RecentWork />
         <Experience />
         <Contact />
+        <Footer />
       </main>
     </div>
   );

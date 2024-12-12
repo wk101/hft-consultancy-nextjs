@@ -21,7 +21,7 @@ const Grid: React.FC<GridProps> = ({ items }) => {
   return (
     <div className="relative px-4 sm:px-8 lg:px-12">
       {/* Grid Layout */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3"> {/* Tighter gaps */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"> {/* Tighter gaps */}
         {items.map((item, index) => (
           <CardThumbnail
             key={index}

@@ -4,17 +4,17 @@ const HjbMarketMaking: React.FC = () => {
   return (
     <section className="px-6 sm:px-12 lg:px-16 py-16 bg-gray-100">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-extrabold text-gray-800 sm:text-5xl">
+        <h3 className="text-3xl font-extrabold text-gray-800 lg:text-4xl">
         Intel HPC: Scaling Profits in HFTs Future.        
-        </h2>
+        </h3>
         <p className="mt-4 text-lg text-gray-700">
-        Discover how cutting-edge **High-Performance Computing (HPC)** techniques optimize 
-          **High-Frequency Trading (HFT)** strategies. This is a simple demonstration of 
-          how technology Intel HPC drives success in todays financial markets.
+        Discover how High-Performance Computing (HPC) techniques optimize profit 
+          for High-Frequency Trading (HFT) strategies. This is a simple demonstration but can be extended for more complex or realistic models.
         </p>
       </div>
       <div className="mt-10 max-w-4xl mx-auto">
         <div className="flex justify-center mt-10">
+        <figure>
           <iframe
             width="640"
             height="360"
@@ -25,6 +25,10 @@ const HjbMarketMaking: React.FC = () => {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
+        <figcaption className="text-gray-800">
+      High-Performance Computing in HFT: Optimizing Market Making with HPC Techniques
+        </figcaption>
+      </figure>
         </div>
         <div className="mt-6">
           <h3 className="text-2xl font-semibold text-gray-800">

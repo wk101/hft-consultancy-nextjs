@@ -3,15 +3,7 @@ import { FC } from "react";
 
 const Tech: FC = () => {
   return (
-    <div
-      style={{
-        textAlign: "center",
-        margin: "40px 0", // Increased padding for better spacing
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <section id="tech" className="flex flex-col items-center justify-center max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-16 py-10">
       <Image
         src="/clients.svg" // Path to your SVG in the public folder
         alt="Showcasing our use of KDB+, Python optimized for Intel SYCL, Intel Math Kernel Library, FPGAs UL3524, and Nvidia A100 GPUs to deliver unmatched performance, backed by deep industry expertise."
@@ -19,7 +11,7 @@ const Tech: FC = () => {
         height={600} // Adjust height accordingly
         priority // Optimizes loading
       />
-    </div>
+    </section>
   );
 };
 

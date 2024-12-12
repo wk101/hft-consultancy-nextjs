@@ -122,17 +122,21 @@ Discover how our PCB designs help reduce costs while meeting the rigorous requir
 
 const WhatWeDoSection: React.FC = () => {
   return (
-    <section id="what-we-do" className="px-6 text-center sm:px-12 lg:px-16 py-10 bg-gray-100">
-      <h2 className="text-3xl font-bold text-black mb-4">Core Expertise: Trading Algorithm Development</h2>
+    <section id="what-we-do" className="bg-gray-100   max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-16 py-10">
+      <h2 className="text-3xl font-bold text-black text-center mb-4">Core Expertise: Trading Algorithm Research & Development</h2>
   
   
 <p className="mt-4 text-black">
     Our expertise spans across <strong>All Asset Classes</strong>, including equities, derivatives, forex, and <strong>cryptocurrency markets</strong>. 
     We deliver robust, scalable, and high-performance solutions tailored to the specific requirements of each client.
 </p>
+<p/>
 <TradingCards/>
-<h2 className="text-3xl font-bold text-black mb-4">High-Frequency Trading: What We Offer</h2>
+<p/>
+<h3 className="text-3xl text-center font-bold text-black mb-4">High-Frequency Trading: What We Offer</h3>
+<p/>
       <Accordion items={accordionItems} /> {/* Pass data to Accordion component */}
+    
     </section>
   );
 };
