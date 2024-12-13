@@ -24,18 +24,18 @@ export default function RootLayout({
         <title>High-Frequency Trading Solutions | HFT Consultancy</title>
         <meta
           name="description"
-          content="Delivering industry-leading solutions for high-frequency trading (HFT) with expertise in ultra-low latency, financial modeling, IP core optimization, and trading lifecycle management."
+          content="Delivering industry-leading solutions for Algo Trading, incl. high-frequency trading (HFT) with expertise in ultra-low latency, financial modeling, IP core optimization, and trading lifecycle management."
         />
         <meta
           name="keywords"
-          content="HFT, HFT Trading, high-frequency trading, ultra-low latency, financial modeling, IP core optimization, trading lifecycle management, FPGA, network optimization, quant development"
+          content="HFT, HFT Trading, algorithmic trading, algo trading, high-frequency trading, ultra-low latency, financial modeling, IP core optimization, trading lifecycle management, FPGA, network optimization, quant development"
         />
 
         {/* Open Graph Metadata */}
         <meta property="og:title" content="HFT Consultancy" />
         <meta
           property="og:description"
-          content="Delivering industry-leading solutions for high-frequency trading (HFT) with expertise in ultra-low latency, financial modeling, IP core optimization, and trading lifecycle management."
+          content="Delivering industry-leading solutions for HFT, Algo Trading incl high-frequency trading (HFT) with expertise in ultra-low latency, financial modeling, IP core optimization, and trading lifecycle management."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://hftconsultancy.com" />

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { FaLinkedin, FaTwitter, FaYoutube, FaGithub } from "react-icons/fa";
+import { SiMedium } from "react-icons/si"; // Medium icon from react-icons
 
 const SocialMediaLinks: React.FC = () => {
   return (
@@ -41,6 +42,15 @@ const SocialMediaLinks: React.FC = () => {
         aria-label="GitHub"
       >
         <FaGithub />
+      </a>
+      <a
+        href="https://hftconsultancy.medium.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white hover:text-blue-400 transition"
+        aria-label="Medium"
+      >
+        <SiMedium />
       </a>
     </div>
   );
