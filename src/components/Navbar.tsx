@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import BurgerBar from "./client/BurgerBar";
 import Menu from "./Menu";
 import SocialMediaLinks from "./SocialMediaLinks";
@@ -13,33 +14,40 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div>
+    <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white shadow-md z-50">
       {/* Navbar Container */}
-      <div className="fixed top-0 left-0 w-full bg-gray-800 text-white flex justify-between items-center p-4 z-50">
+      <div className="flex justify-between items-center p-4">
         {/* Logo */}
-        <div className="flex items-center space-x-4">
-          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden">
-            <img src="/logo-black.png" alt="Logo" className="object-contain w-full h-full" />
+        <div className="flex items-center">
+          <div className="relative w-10 h-10 bg-white rounded-full shadow-lg overflow-hidden">
+            <Image
+              src="/logo-black.png"
+              alt="Company Logo"
+              fill
+              className="object-contain"
+              sizes="40px"
+              priority
+            />
           </div>
         </div>
 
-        {/* Large Screens: Center Menu Items */}
+        {/* Centered Menu Items for Large Screens */}
         <div className="hidden lg:flex items-center justify-center w-full space-x-6">
           <Menu isMobileMenuOpen={false} closeMenu={() => {}} />
         </div>
 
-        {/* Large Screens: Align Social Media Icons to the Right */}
+        {/* Social Media Icons for Large Screens */}
         <div className="hidden lg:flex justify-end space-x-4">
           <SocialMediaLinks />
         </div>
 
-        {/* Small Screens: Show BurgerBar */}
+        {/* Burger Menu for Small Screens */}
         <div className="lg:hidden">
           <BurgerBar toggleMenu={toggleMobileMenu} />
         </div>
       </div>
 
-      {/* Mobile Menu (Visible only on small screens when toggled) */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-gray-800 text-white p-4 flex flex-col space-y-4 z-40">
           <Menu
@@ -48,7 +56,7 @@ const Navbar: React.FC = () => {
           />
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 

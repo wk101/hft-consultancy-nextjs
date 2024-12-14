@@ -126,11 +126,17 @@ const WhatWeDoSection: React.FC = () => {
       <h2 className="text-3xl font-bold text-black text-center mb-4">Core Expertise: Trading Algorithm Research & Development</h2>
   
   
-<p className="mt-4 text-black">
-    Our expertise spans across <strong>All Asset Classes</strong>, including equities, derivatives, forex, and <strong>cryptocurrency markets</strong>. 
-    We deliver robust, scalable, and high-performance solutions tailored to the specific requirements of each client.
-</p>
-<p/>
+    <div className="mt-4 text-gray-800">
+    <p>
+        At HFT Consultancy, our expertise spans all asset classes, including fixed income, equities, derivatives, forex, and cryptocurrency markets. 
+    </p>
+    <p>
+        We focus on delivering real-world solutions for high-frequency trading (HFT) and algorithmic strategies such as market-making, arbitrage, and execution optimization. 
+    </p>
+    <p>
+        Our multidisciplinary team combines expertise in financial mathematics, algorithm development, and electrical engineering to design and implement systems that are fast, reliable, and efficient. With a hands-on approach and deep industry knowledge, we help clients optimize their trading performance and navigate the complexities of modern markets.
+    </p>
+</div>
 <TradingCards/>
 <p/>
 <h3 className="text-3xl text-center font-bold text-black mb-4">High-Frequency Trading: What We Offer</h3>

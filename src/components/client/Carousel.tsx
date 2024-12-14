@@ -1,12 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface CarouselProps {
   images: {
     src: string;
     alt: string;
     description: string;
+    width: number;
+    height: number;
   }[];
 }
 
@@ -26,17 +29,24 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   };
 
   return (
-    <div className="relative w-[600px] h-[400px] mx-auto group">
+    <div className="relative w-full max-w-[600px] h-auto mx-auto group aspect-video">
       {/* Carousel Images */}
       {images.map((image, index) => (
-        <img
+        <div
           key={index}
-          src={image.src}
-          alt={image.alt}
-          className={`absolute top-0 left-0 w-full h-full object-cover rounded-lg transition-opacity duration-500 ${
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
             index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
-        />
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            className="object-cover rounded-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 75vw, 600px"
+            priority={index === currentIndex} // Prioritize loading current image
+          />
+        </div>
       ))}
 
       {/* Navigation Arrows */}
