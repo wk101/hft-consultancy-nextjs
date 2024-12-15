@@ -1,7 +1,5 @@
-//import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,12 +12,6 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const metadata = {
-  title: "HFT Consultancy",
-  description:
-    "Delivering industry-leading solutions for high-frequency trading (HFT) with expertise in ultra-low latency, financial modeling, IP core optimization, and trading lifecycle management.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,45 +19,59 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        {/* Title and Meta Description */}
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        
-        {/* Keywords */}
+      <head>
+        {/* SEO Metadata */}
+        <title>High-Frequency Trading Solutions | HFT Consultancy</title>
+        <meta
+          name="description"
+          content="Delivering industry-leading solutions for Algo Trading, incl. high-frequency trading (HFT) with expertise in ultra-low latency, financial modeling, IP core optimization, and trading lifecycle management."
+        />
         <meta
           name="keywords"
-          content="HFT, high-frequency trading, ultra-low latency, IP cores, financial modeling, trading lifecycle management, network optimization, FPGA, trading algorithms, microservices architecture, cyber security, trading infrastructure, accelerators, financial math, quant development"
+          content="HFT, HFT Trading, algorithmic trading, algo trading, high-frequency trading, ultra-low latency, financial modeling, IP core optimization, trading lifecycle management, FPGA, network optimization, quant development"
         />
 
-        {/* Responsive Design */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Open Graph Metadata for Social Media */}
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
+        {/* Open Graph Metadata */}
+        <meta property="og:title" content="HFT Consultancy" />
         <meta
-          property="og:image"
-          content="/og-image.png" // Replace with the actual OG image path
+          property="og:description"
+          content="Delivering industry-leading solutions for HFT, Algo Trading incl high-frequency trading (HFT) with expertise in ultra-low latency, financial modeling, IP core optimization, and trading lifecycle management."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://hftconsultancy.com" />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:locale" content="en_US" />
 
         {/* Twitter Card Metadata */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:title" content="HFT Consultancy" />
         <meta
-          name="twitter:image"
-          content="/twitter-image.png" // Replace with the actual Twitter image path
+          name="twitter:description"
+          content="Delivering industry-leading solutions for high-frequency trading (HFT)."
         />
+        <meta name="twitter:image" content="/twitter-image.png" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://hftconsultancy.com" />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
 
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://hftconsultancy.com" />
-      </Head>
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "HFT Consultancy",
+              "url": "https://hftconsultancy.com",
+              "logo": "https://hftconsultancy.com/favicon.ico",
+              "sameAs": ["https://linkedin.com/in/hft-quant"],
+            }),
+          }}
+        ></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
