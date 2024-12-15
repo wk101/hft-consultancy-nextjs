@@ -4,6 +4,53 @@ Allow: /
 Disallow: /admin
 Disallow: /api
 Disallow: /drafts
+Disallow: /staging
+Disallow: /test-environment
+Disallow: /*.pdf$
+Disallow: /*.docx$
+Disallow: /images/private/*
+Crawl-delay: 5
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /drafts
+Disallow: /test-environment
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Disallow: /api
+Disallow: /drafts
+Disallow: /staging
+Crawl-delay: 10
+
+# DuckDuckBot
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /private
+Disallow: /testing
+
+# YandexBot
+User-agent: YandexBot
+Allow: /
+Disallow: /admin
+Disallow: /drafts
+Disallow: /test-environment
+
+# Baiduspider
+User-agent: Baiduspider
+Disallow: /
+
+# AhrefsBot
+User-agent: AhrefsBot
+Disallow: /
+
+# SemrushBot
+User-agent: SemrushBot
+Disallow: /private
+Disallow: /drafts
 
 # Host
 Host: https://hftconsultancy.com
