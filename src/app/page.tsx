@@ -1,26 +1,32 @@
-// page.tsx or home.tsx
-import RootLayout from './layout';
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import RecentWork from "../components/RecentWork";
 import Experience from "../components/Experience";
 import Contact from "../components/Contact";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
+import  HjbMarketMaking from "@/components/HjbMarketMaking";
+import Tech from "@/components/Tech";
+import Footer from "@/components/Footer";
 
 const Home: React.FC = () => {
   return (
-    <RootLayout>
-      <div className="flex flex-col">
-        <Navbar />
-        <main className="pt-16 bg-gray-100 overflow-hidden w-full">
-          <Hero />
-          <WhatWeDoSection />
-          <RecentWork />
-          <Experience />
-          <Contact />
-        </main>
-      </div>
-    </RootLayout>
+    <div className="flex flex-col">
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Main Content */}
+      <main className="pt-16 bg-gray-100 overflow-hidden w-full">
+        {/* Adjust the Hero section and other content */}
+        <Hero />
+        <WhatWeDoSection />
+        <Tech />
+        <HjbMarketMaking />
+        <RecentWork />
+        <Experience />
+        <Contact />
+        <Footer />
+      </main>
+    </div>
   );
 };
 

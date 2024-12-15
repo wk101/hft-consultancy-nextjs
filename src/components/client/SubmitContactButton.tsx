@@ -28,7 +28,7 @@ const SubmitContactButton: React.FC = () => {
       className={`w-full px-6 py-3 text-white rounded-lg transition ${
         success
           ? "bg-green-600 hover:bg-green-700"
-          : "bg-blue-600 hover:bg-blue-700"
+          : "bg-gray-600 hover:bg-gray-700"
       }`}
       disabled={loading || success}
     >

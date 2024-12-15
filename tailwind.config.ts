@@ -23,6 +23,10 @@ module.exports = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        fadeInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-50px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
         scaleIn: {
           "0%": { transform: "scale(0.9)" },
           "100%": { transform: "scale(1)" },
@@ -33,6 +37,8 @@ module.exports = {
         },
       },
       animation: {
+        'fade-in': 'fadeIn 1.5s ease-in-out',
+        'fade-in-left': 'fadeInLeft 1.5s ease-in-out',
         fadeInScale: "fadeInScale 3s ease-out forwards",
         "fade-slide-in": "fadeSlideIn 3s ease-out forwards",
         "fade-slide-in-delay": "fadeSlideIn 3s ease-out 0.5s forwards",
