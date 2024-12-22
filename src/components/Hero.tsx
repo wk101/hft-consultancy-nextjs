@@ -5,9 +5,8 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative flex flex-col md:flex-row items-center max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-16"
+      className="relative flex flex-col md:flex-row items-center max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-16 py-8 sm:py-12 md:py-0 md:h-screen"
       style={{
-        height: "100vh", // Full viewport height
         background: "linear-gradient(to right, #ffffff, #f9fafb)", // Subtle gradient
       }}
     >
@@ -15,26 +14,25 @@ const Hero: React.FC = () => {
       <div
         className="flex-1 flex flex-col justify-center md:pr-8 text-center md:text-left animate-fade-in-left"
       >
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
           What We Do: <br className="hidden sm:block" />
-          High-Performance Trading Solutions
+          Delivering safe investments with high returns for institutional investors
         </h1>
         <p className="text-lg sm:text-xl text-gray-700 mb-6 leading-relaxed">
-          By delivering accelerators, ultra-low latency solutions, and financial models, 
-          we empower your trading systems with unmatched efficiency.
+        By delivering ultra-low latency solutions, robust risk-management financial models, and tailored strategies, we cover everything from A to Z.
         </p>
         {/* Delegate interactive button to client component */}
         <HeroInteractive />
       </div>
 
-      {/* Right Column: Image */}
+      {/* Right Column: Responsive Image */}
       <div
-        className="flex-1 h-full animate-fade-in"
+        className="flex-1 w-full h-64 md:h-full animate-fade-in"
       >
         <div
           className="w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: `url('/hero_pic.png')`, // Set the image
+            backgroundImage: `url('/hero_pic.png')`, // Replace with your image
           }}
         ></div>
       </div>

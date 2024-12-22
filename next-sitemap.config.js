@@ -50,17 +50,9 @@ const config = {
       {
         userAgent: 'Baiduspider',
         disallow: '/', // Block Baidu entirely
-      },
-      // Block AhrefsBot (SEO tool crawler)
-      {
-        userAgent: 'AhrefsBot',
-        disallow: '/',
-      },
-      // Block SemrushBot (SEO tool crawler)
-      {
-        userAgent: 'SemrushBot',
-        disallow: ['/private', '/drafts'],
-      },
+      }
+      
+      
     ],
     // Main sitemap
     additionalSitemaps: [

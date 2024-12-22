@@ -131,10 +131,10 @@ const WhatWeDoSection: React.FC = () => {
         At HFT Consultancy, our expertise spans all asset classes, including fixed income, equities, derivatives, forex, and cryptocurrency markets. 
     </p>
     <p>
-        We focus on delivering real-world solutions for high-frequency trading (HFT) and algorithmic strategies such as market-making, arbitrage, and execution optimization. 
+        We focus on delivering safe investments with high returns real-world solutions for high-frequency trading (HFT) and algorithmic strategies such as market-making, arbitrage, and execution optimization. 
     </p>
     <p>
-        Our multidisciplinary team combines expertise in financial mathematics, algorithm development, and electrical engineering to design and implement systems that are fast, reliable, and efficient. With a hands-on approach and deep industry knowledge, we help clients optimize their trading performance and navigate the complexities of modern markets.
+    With decades of experience in institutional investment and close to 10 years as consultants, We helped a long list of institutional investors and high-net-worth clients achieve safe investments with high returns. Our multidisciplinary team combines expertise in financial mathematics, algorithm development, and electrical engineering to design and implement systems that are fast, reliable, and efficient. With a hands-on approach and deep industry knowledge.
     </p>
 </div>
 <TradingCards/>

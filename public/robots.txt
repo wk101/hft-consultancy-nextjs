@@ -43,15 +43,6 @@ Disallow: /test-environment
 User-agent: Baiduspider
 Disallow: /
 
-# AhrefsBot
-User-agent: AhrefsBot
-Disallow: /
-
-# SemrushBot
-User-agent: SemrushBot
-Disallow: /private
-Disallow: /drafts
-
 # Host
 Host: https://hftconsultancy.com
 
