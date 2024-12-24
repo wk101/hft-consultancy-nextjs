@@ -14,9 +14,9 @@ const Hero: React.FC = () => {
       <div
         className="flex-1 flex flex-col justify-center md:pr-8 text-center md:text-left animate-fade-in-left"
       >
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 leading-tight hover:text-primary hover:animate-hover-scale">
           What We Do: <br className="hidden sm:block" />
-          Delivering safe investments with high returns for institutional investors
+          Maximizing Returns Safely for Institutional Investors
         </h1>
         <p className="text-lg sm:text-xl text-gray-700 mb-6 leading-relaxed">
         By delivering ultra-low latency solutions, robust risk-management financial models, and tailored strategies, we cover everything from A to Z.
