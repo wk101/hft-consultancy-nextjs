@@ -18,11 +18,17 @@ const Home: React.FC = () => {
       <main className="pt-16 bg-gray-100 overflow-hidden w-full">
         {/* Adjust the Hero section and other content */}
         <Hero />
+        <hr/>
         <WhatWeDoSection />
+        <hr/>
         <Tech />
+        <hr/>
         <HjbMarketMaking />
+        <hr/>
         <RecentWork />
+        <hr/>
         <Experience />
+        <hr/>
         <Contact />
         <Footer />
       </main>

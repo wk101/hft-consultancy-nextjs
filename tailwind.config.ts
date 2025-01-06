@@ -17,7 +17,7 @@ module.exports = {
       keyframes: {
         hoverScale: {
           '0%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.03)' },
+          '50%': { transform: 'scale(1.02)' },
           '100%': { transform: 'scale(1)' },
         },
         
