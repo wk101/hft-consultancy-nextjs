@@ -3,9 +3,9 @@ import Grid from "@/components/client/Grid";
 
 const workItems = [
   {
-    title: "KDB+ Tick Plant Engine",
+    title: "KDB+ Tick Plant",
     description:
-      "KDB+ is an in-memory tick plant column store that uses the Q programming language to publish and manage tick data efficiently.",
+      "Our implementation for a leading investment bank spanned all business units, providing a unified data source seamlessly integrated into group-wide risk engines for comprehensive analysis and decision-making. We utilized KDB+, an in-memory tick plant column store that leverages the Q programming language to efficiently publish and manage tick data.",
     metaDescription:
       "Photo shows Q code KDB+ for a tick plant engine: KDB, an in-memory column store optimized for managing and publishing tick data with unmatched speed and accuracy using Q language.",
     thumbnail: "/images/recent-work/kdb-tick-plant-thumbnail.jpg",
@@ -30,45 +30,45 @@ const workItems = [
     largeImage: "/images/recent-work/cyber-security.jpg",
   },
   {
-    title: "HFT Servers",
+    title: "Maintain HFT Servers",
     description:
-      "HFT servers are high-spec machines equipped with redundant power supplies, ECC memory, and optimized hardware for reliable and low-latency trading performance.",
+      "HFT servers are high-spec machines equipped with redundant power supplies, ECC memory, and optimized hardware FPGAs, for reliable and low-latency trading performance.",
     metaDescription:
       "High-frequency trading server: a photo showcasing high-spec hardware with redundant power supplies, ECC memory, and robust architecture for maximum reliability.",
     thumbnail: "/images/recent-work/hft-servers-thumbnail.jpg",
     largeImage: "/images/recent-work/hft-servers.jpg",
   },
   {
-    "title": "Fast and Slow Path HFT",
+    "title": "Fast and Slow Path",
     "description": 
-      "FD.io supports both fast path and slow path operations, enabling high-frequency trading (HFT) platforms to combine ultra-low latency trading with robust risk management. Fast path handles real-time trading decisions and critical market data ingestion with minimal latency, while slow path monitors systemic risks, black swan events, and compliance tasks.",
+      "Our agency developed a cutting-edge fast path and slow path infrastructure for an investment bank, leveraging FD.io to enable fast path operations and significantly reduce latency through user-space optimizations. Meanwhile, the slow path ensures robust risk management and monitors systemic risks and black swan events. This infrastructure seamlessly combines high performance with operational resilience.",
     "metaDescription": 
-      "Leverage FD.io for HFT: Fast path for real-time trading and slow path for risk and compliance, ensuring high-speed execution and robust oversight.",
+      "Leverage FD.io for HFT: Fast path for real-time trading and slow path for risk and compliance, ensuring high-speed execution.",
     "thumbnail": "/images/recent-work/fd-io-hft-thumbnail.jpg",
     "largeImage": "/images/recent-work/fd-io-hft.png"
   },
   {
-    "title": "Optimizing Keccak CUDA",
+    "title": "Crypto Mining - Keccak",
     "description": 
-      "Efforts are underway to optimize Keccak for mining by leveraging advanced CPU and GPU techniques. Current approaches involve AVX512 intrinsics for CPU and CUDA for GPU, targeting performance improvements through parallel/sequential execution strategies, loop restructuring (combining/splitting), and memory/cache optimization. The optimization scope also includes porting to other languages and utilizing OpenMP for parallelism.",
+      "We optimized Keccak for mining, achieving substantial performance improvements by leveraging AVX512 intrinsics for CPUs and CUDA for GPUs. Optimization techniques include parallel and sequential execution, loop restructuring, and memory/cache tuning. The implementation also supports OpenMP for parallelism and is adaptable to other programming languages, ensuring scalability across diverse systems.",
     "metaDescription": 
       "Optimizing Keccak for mining with AVX512 intrinsics on CPU, CUDA on GPU, memory/cache enhancements, OpenMP, and parallel execution strategies.",
     "thumbnail": "/images/recent-work/keccak-optimization-thumbnail.jpeg",
     "largeImage": "/images/recent-work/keccak-optimization.jpg"
   },
   {
-    "title": "Fireblocks: Workflows",
+    "title": "R&D for a $1 Billion Fund",
     "description": 
-      "A structured roadmap for Fireblocks to implement transaction approval consensus workflows. With Intel SGX Enclaves.",
+      "Our consultancy supported a $1 billion AUM crypto hedge fund on Wall Street by providing R&D strategies and designing a secure Docker-based CI/CD pipeline and infrastructure to execute these strategies. The R&D solutions utilized Fireblocks to implement transaction approval consensus workflows and leveraged Intel SGX enclaves for enhanced security.",
     "metaDescription": 
       "Fireblocks : Streamline Intel SGX Enclave workflows with Transaction approvals",
     "thumbnail": "/images/recent-work/fireblocks.png",
     "largeImage": "/images/recent-work/fireblocks.jpg"
   },
   {
-    "title": "HFT with Jupiter on Solana",
+    "title": "HFT Profits Powered",
     "description": 
-      "Harness the power of a Mean Reversion Bot built on Solana, leveraging QuickNode and Jupiter Aggregator's cutting-edge technology. The bot utilizes Jupiter's Smart Order Routing (SOR) algorithm to aggregate pricing from multiple decentralized exchanges (DEXs) and automated market makers (AMMs)",
+      "Our trading algorithm has achieved up to 30% profit in just one week. Harness the power of a Mean Reversion Bot built on Solana, leveraging QuickNode and Jupiter Aggregator's cutting-edge technology. The bot utilizes Jupiter's Smart Order Routing (SOR) algorithm to aggregate pricing from multiple decentralized exchanges (DEXs) and automated market makers (AMMs). Additionally, we developed a sophisticated volume bot designed to optimize trading and liquidity for newly launched tokens.",
     "metaDescription": 
       "Build a Mean Reversion Bot on Solana using QuickNode and Jupiter Aggregator. Mev Resistant,  Utilize Smart Order Routing (SOR) for optimal pricing across DEXs and AMMs to enhance trading efficiency.",
     "thumbnail": "/images/recent-work/quicknode.jpg",

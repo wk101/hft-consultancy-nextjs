@@ -122,28 +122,58 @@ Discover how our PCB designs help reduce costs while meeting the rigorous requir
 
 const WhatWeDoSection: React.FC = () => {
   return (
-    <section id="what-we-do" className="bg-gray-100   max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-16 py-10">
-      <h2 className="text-3xl font-bold text-black text-center mb-4">Core Expertise: Trading Algorithm Research & Development</h2>
-  
-  
-    <div className="mt-4 text-gray-800">
-    <p>
-        At HFT Consultancy, our expertise spans all asset classes, including fixed income, equities, derivatives, forex, and cryptocurrency markets. 
-    </p>
-    <p>
-        We focus on delivering safe investments with high returns real-world solutions for high-frequency trading (HFT) and algorithmic strategies such as market-making, arbitrage, and execution optimization. 
-    </p>
-    <p>
-    With decades of experience in institutional investment and close to 10 years as consultants, We helped a long list of institutional investors and high-net-worth clients achieve safe investments with high returns. Our multidisciplinary team combines expertise in financial mathematics, algorithm development, and electrical engineering to design and implement systems that are fast, reliable, and efficient. With a hands-on approach and deep industry knowledge.
-    </p>
-</div>
-<TradingCards/>
-<p/>
-<h3 className="text-3xl text-center font-bold text-black mb-4">High-Frequency Trading: What We Offer</h3>
-<p/>
-      <Accordion items={accordionItems} /> {/* Pass data to Accordion component */}
     
-    </section>
+    <article
+  id="what-we-do"
+  className="bg-gray-100 text-gray-600 max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-16 py-12"
+>
+  {/* Section Heading */}
+  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black text-center mb-8">
+    Trading Algorithm Research & Development
+  </h2>
+
+  {/* Expertise Section */}
+  <div className="space-y-6">
+    <div>
+      <h3 className="text-lg sm:text-xl font-semibold text-gray-800">Our Expertise</h3>
+      <p className="text-sm sm:text-base leading-relaxed">
+        At HFT Consultancy, our expertise spans all asset classes, including fixed income, equities, derivatives, forex, and cryptocurrency markets.
+      </p>
+    </div>
+
+    {/* Focus Section */}
+    <div>
+      <h3 className="text-lg sm:text-xl font-semibold text-gray-800">Focus</h3>
+      <p className="text-sm sm:text-base leading-relaxed">
+        We focus on delivering safe investments with high returns and real-world solutions for high-frequency trading (HFT) and algorithmic strategies such as market-making, arbitrage, and execution optimization.
+      </p>
+    </div>
+
+    {/* Experience Section */}
+    <div>
+      <h3 className="text-lg sm:text-xl font-semibold text-gray-800">Experience</h3>
+      <p className="text-sm sm:text-base leading-relaxed">
+        With decades of experience in institutional investment and close to 10 years as consultants, we’ve helped a long list of institutional investors and high-net-worth clients achieve safe investments with high returns. Our multidisciplinary team combines expertise in financial mathematics, algorithm development, and electrical engineering to design and implement systems that are fast, reliable, and efficient. With a hands-on approach and deep industry knowledge.
+      </p>
+    </div>
+  </div>
+
+  {/* Trading Cards */}
+  <div className="mt-8">
+    <TradingCards />
+  </div>
+
+  {/* What We Offer Section */}
+  <h3 className="text-2xl sm:text-3xl lg:text-4xl py-8 text-center font-bold text-black">
+    What We Offer
+  </h3>
+
+  {/* Accordion Section */}
+  <div className="mt-4">
+    <Accordion items={accordionItems} /> {/* Pass data to Accordion component */}
+  </div>
+</article>
+
   );
 };
 
