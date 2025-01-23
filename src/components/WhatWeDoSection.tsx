@@ -125,12 +125,17 @@ const WhatWeDoSection: React.FC = () => {
     
     <article
   id="what-we-do"
-  className="bg-gray-100 text-gray-600 max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-16 py-12"
+  className="bg-gray-100 text-gray-700 max-w-screen-xl mx-auto mt-8 px-6 sm:px-8 lg:px-16 py-12"
 >
   {/* Section Heading */}
-  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black text-center mb-8">
-    Trading Algorithm Research & Development
+  <h2 className="text-2xl sm:text-2xl lg:text-3xl font-bold text-black text-center mb-8">
+    We Code, You Profit &mdash; No Rabbit&apos;s Foot Required
   </h2>
+    {/* Trading Cards */}
+    <div className="mt-8 mb-8">
+    <TradingCards />
+  </div>
+  
 
   {/* Expertise Section */}
   <div className="space-y-6">
@@ -158,15 +163,10 @@ const WhatWeDoSection: React.FC = () => {
     </div>
   </div>
 
-  {/* Trading Cards */}
-  <div className="mt-8">
-    <TradingCards />
-  </div>
-
   {/* What We Offer Section */}
-  <h3 className="text-2xl sm:text-3xl lg:text-4xl py-8 text-center font-bold text-black">
+  <h2 className="text-2xl sm:text-2xl lg:text-3xl font-bold text-black text-center mt-8 mb-8">
     What We Offer
-  </h3>
+  </h2>
 
   {/* Accordion Section */}
   <div className="mt-4">

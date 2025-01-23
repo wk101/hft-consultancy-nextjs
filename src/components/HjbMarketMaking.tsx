@@ -1,12 +1,14 @@
 import React from "react";
+import Tech from "@/components/Tech";
 
 const HjbMarketMaking: React.FC = () => {
   return (
-    <section className="px-6 sm:px-12 lg:px-16 py-16 bg-gray-100">
+    <section className="px-6 sm:px-12 lg:px-16 py-8 bg-gray-100">
       <div className="max-w-6xl mx-auto text-center">
-        <h3 className="text-xl font-extrabold text-gray-800 lg:text-2xl">
-          Intel and HPC: Scaling Profits with Institutional Tech.
-        </h3>
+        <h2 className="text-2xl sm:text-2xl lg:text-3xl font-bold text-black text-center mb-8">
+        Scaling profits with <strong>heterogeneous compute</strong> power using <em>Intel OneAPI</em>.
+        </h2>
+        <Tech />
         <p className="mt-4 text-lg text-gray-700">
           Discover how High-Performance Computing (HPC) techniques optimize profit
           for High-Frequency Trading (HFT) strategies. <br/>This is a simple demonstration but can be extended for more complex or realistic models.

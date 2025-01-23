@@ -5,7 +5,6 @@ import Experience from "../components/Experience";
 import Contact from "../components/Contact";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
 import  HjbMarketMaking from "@/components/HjbMarketMaking";
-import Tech from "@/components/Tech";
 import Footer from "@/components/Footer";
 
 const Home: React.FC = () => {
@@ -20,8 +19,6 @@ const Home: React.FC = () => {
         <Hero />
         <hr/>
         <WhatWeDoSection />
-        <hr/>
-        <Tech />
         <hr/>
         <HjbMarketMaking />
         <hr/>
