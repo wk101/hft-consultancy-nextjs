@@ -24,7 +24,7 @@ export default function RootLayout({
         <title>High-Frequency Trading Solutions | HFT Consultancy</title>
         <meta
           name="description"
-          content="A leading consultancy specializing in algorithmic and high-frequency trading (HFT) solutions. We deliver expertise in ultra-low latency systems, advanced financial modeling, IP core optimization, FPGA implementation, network optimization, and trading lifecycle management. Our strategies let our clients, institutional investors, achieve safe investments with high returns."
+          content="A rapidly growing consultancy specializing in algorithmic trading. We help clients, institutional investors, achieve safe investments with high returns."
         />
         <meta
           name="keywords"
