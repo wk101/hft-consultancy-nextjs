@@ -1,0 +1,28 @@
+name: Claims Guard
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  claims-guard:
+    name: Guard against investment-return claims
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # We sell engineering outcomes, not investment returns. Return claims
+      # invite regulatory and diligence questions a software vendor has no
+      # reason to attract, and they cost credibility with the institutional
+      # buyers who can actually procure a build.
+      #
+      # This fails the build if such copy reappears in the site source.
+      - name: Scan for prohibited marketing claims
+        run: |
+          if grep -rniE 'safe investment|high returns|you profit|guaranteed (return|profit|profits)|volume bot|risk[- ]free' src/; then
+            echo "::error::Prohibited investment-return claim found in src/."
+            echo "We sell engineering outcomes: latency, conformance, throughput, uptime."
+            exit 1
+          fi
+          echo "No prohibited claims found."
