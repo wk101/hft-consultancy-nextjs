@@ -129,7 +129,7 @@ const WhatWeDoSection: React.FC = () => {
 >
   {/* Section Heading */}
   <h2 className="text-2xl sm:text-2xl lg:text-3xl font-bold text-black text-center mb-8">
-    We Code, You Profit &mdash; No Rabbit&apos;s Foot Required
+    We Build the Fast Path. You Own the Edge.
   </h2>
     {/* Trading Cards */}
     <div className="mt-8 mb-8">
@@ -142,7 +142,7 @@ const WhatWeDoSection: React.FC = () => {
     <div>
       <h3 className="text-lg sm:text-xl font-semibold text-gray-800">Our Expertise</h3>
       <p className="text-sm sm:text-base leading-relaxed">
-        At HFT Consultancy, our expertise spans all asset classes, including fixed income, equities, derivatives, forex, and cryptocurrency markets.
+        Our expertise spans all asset classes &mdash; fixed income, equities, derivatives, forex, and digital assets &mdash; and the full path from venue to strategy: market data, order entry, risk, and execution.
       </p>
     </div>
 
@@ -150,7 +150,7 @@ const WhatWeDoSection: React.FC = () => {
     <div>
       <h3 className="text-lg sm:text-xl font-semibold text-gray-800">Focus</h3>
       <p className="text-sm sm:text-base leading-relaxed">
-        We focus on delivering safe investments with high returns and real-world solutions for high-frequency trading (HFT) and algorithmic strategies such as market-making, arbitrage, and execution optimization.
+        We build the infrastructure that algorithmic strategies run on: venue-certified connectivity, deterministic execution paths, and systems that stay correct under load. Market-making, arbitrage and execution optimisation are the workloads we engineer for.
       </p>
     </div>
 
@@ -158,7 +158,7 @@ const WhatWeDoSection: React.FC = () => {
     <div>
       <h3 className="text-lg sm:text-xl font-semibold text-gray-800">Experience</h3>
       <p className="text-sm sm:text-base leading-relaxed">
-        With decades of experience in institutional investment and close to 10 years as consultants, we’ve helped a long list of institutional investors and high-net-worth clients achieve safe investments with high returns. Our multidisciplinary team combines expertise in financial mathematics, algorithm development, and electrical engineering to design and implement systems that are fast, reliable, and efficient. With a hands-on approach and deep industry knowledge.
+        With decades in institutional markets and close to ten years consulting, we have delivered production trading systems for banks, funds and exchanges &mdash; including venue-certified FIX engines, colocated market-data infrastructure, and exchange and custody platforms. Our team combines financial mathematics, low-latency software engineering and electrical engineering, so the design and the silicon are considered together rather than in sequence.
       </p>
     </div>
   </div>
