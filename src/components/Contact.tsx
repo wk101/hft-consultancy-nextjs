@@ -20,11 +20,11 @@ const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState<{
     submitting: boolean;
     succeeded: boolean;
-    error: string | null;
+    failed: boolean;
   }>({
     submitting: false,
     succeeded: false,
-    error: null,
+    failed: false,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -34,34 +34,35 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormStatus({ submitting: true, succeeded: false, error: null });
+    setFormStatus({ submitting: true, succeeded: false, failed: false });
+
+    // The submit goes to our own route handler, which holds the Web3Forms
+    // key, enforces the honeypot and rate-limits by IP. Nothing secret is
+    // reachable from this component.
+    const botcheck = new FormData(e.currentTarget).get("botcheck");
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          access_key: "fca21106-2e90-411a-bbe2-2a737bebcdf0", // Replace with your Web3Forms Access Key
-          ...formData,
-        }),
+        body: JSON.stringify({ ...formData, botcheck }),
       });
 
-      if (response.ok) {
-        setFormData({ name: "", email: "", message: "" });
-        setFormStatus({ submitting: false, succeeded: true, error: null });
-      } else {
-        throw new Error("Failed to submit form");
+      if (!response.ok) {
+        throw new Error(`Contact endpoint responded ${response.status}`);
       }
+
+      setFormData({ name: "", email: "", message: "" });
+      setFormStatus({ submitting: false, succeeded: true, failed: false });
     } catch (error) {
-      if (error instanceof Error) {
-        setFormStatus({ submitting: false, succeeded: false, error: error.message });
-      } else {
-        setFormStatus({ submitting: false, succeeded: false, error: "An unknown error occurred." });
-      }
+      // Never surface the raw error to the visitor. Log it, show a generic
+      // message with a way to reach us anyway.
+      console.error("Contact form submission failed:", error);
+      setFormStatus({ submitting: false, succeeded: false, failed: true });
     }
   };
 
@@ -123,22 +124,37 @@ const Contact: React.FC = () => {
           />
         </div>
 
+        {/* Honeypot — hidden from people, tempting to bots. Not a real field. */}
+        <input
+          type="checkbox"
+          name="botcheck"
+          className="hidden"
+          style={{ display: "none" }}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+        />
+
         <button
           type="submit"
           disabled={formStatus.submitting}
-          className="w-full bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition"
+          className="w-full bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition disabled:opacity-60"
         >
           {formStatus.submitting ? "Submitting..." : "Submit"}
         </button>
 
         {formStatus.succeeded && (
-          <p className="text-green-500 text-center mt-4">
+          <p className="text-green-600 text-center mt-4">
             Thank you! Your message has been sent.
           </p>
         )}
-        {formStatus.error && (
-          <p className="text-red-500 text-center mt-4">
-            {formStatus.error}
+        {formStatus.failed && (
+          <p className="text-red-600 text-center mt-4">
+            Sorry, your message could not be sent. Please email us directly at{" "}
+            <a href="mailto:info@hftconsultancy.com" className="underline">
+              info@hftconsultancy.com
+            </a>
+            .
           </p>
         )}
       </form>

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -12,6 +13,73 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const DESCRIPTION =
+  "Engineering consultancy for high-frequency trading and digital-asset infrastructure. Venue-certified FIX and market-data connectivity, FPGA and kernel-bypass fast paths, colocation buildout, exchange and custody systems.";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://hftconsultancy.com"),
+  title: "Ultra-Low-Latency Trading Systems | HFT Consultancy",
+  description: DESCRIPTION,
+  keywords: [
+    "high-frequency trading",
+    "ultra-low latency",
+    "FIX protocol",
+    "FIX 4.4 certification",
+    "ITCH market data",
+    "market data handler",
+    "FPGA trading",
+    "kernel bypass",
+    "colocation",
+    "latency optimisation",
+    "matching engine",
+    "exchange infrastructure",
+    "digital asset custody",
+    "smart contract review",
+    "trading systems consultancy",
+  ],
+  alternates: {
+    canonical: "https://hftconsultancy.com",
+  },
+  openGraph: {
+    title: "HFT Consultancy — Ultra-Low-Latency Trading Systems",
+    description: DESCRIPTION,
+    type: "website",
+    url: "https://hftconsultancy.com",
+    images: ["/og-image.png"],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HFT Consultancy — Ultra-Low-Latency Trading Systems",
+    description:
+      "Trading infrastructure engineering: venue connectivity, fast-path hardware, colocation, exchange and custody systems.",
+    images: ["/twitter-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "HFT Consultancy",
+  url: "https://hftconsultancy.com",
+  logo: "https://hftconsultancy.com/favicon.ico",
+  description: DESCRIPTION,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Ave. Tiradentes esq",
+    addressLocality: "Santo Domingo",
+    postalCode: "10124",
+    addressCountry: "DO",
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/hft-consultancy/",
+    "https://www.linkedin.com/in/hft-quant/",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,62 +87,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* SEO Metadata */}
-        <title>High-Frequency Trading Solutions | HFT Consultancy</title>
-        <meta
-          name="description"
-          content="A rapidly growing consultancy specializing in algorithmic trading. We help clients, institutional investors, achieve safe investments with high returns."
-        />
-        <meta
-          name="keywords"
-          content="Consultancy, Fintech, safe investments with high returns, institutional investors, HFT, high-frequency trading, algorithmic trading, algo trading, ultra-low latency, financial modeling, IP core optimization, trading lifecycle management, FPGA, network optimization, quant development"
-        />
-
-        {/* Open Graph Metadata */}
-        <meta property="og:title" content="HFT Consultancy" />
-        <meta
-          property="og:description"
-          content="Delivering industry-leading solutions for HFT, Algo Trading incl high-frequency trading (HFT) with expertise in ultra-low latency, financial modeling, IP core optimization, and trading lifecycle management."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://hftconsultancy.com" />
-        <meta property="og:image" content="/og-image.png" />
-        <meta property="og:locale" content="en_US" />
-
-        {/* Twitter Card Metadata */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="HFT Consultancy" />
-        <meta
-          name="twitter:description"
-          content="Delivering industry-leading solutions for high-frequency trading (HFT)."
-        />
-        <meta name="twitter:image" content="/twitter-image.png" />
-
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://hftconsultancy.com" />
-
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-
-        {/* JSON-LD Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "HFT Consultancy",
-              "url": "https://hftconsultancy.com",
-              "logo": "https://hftconsultancy.com/favicon.ico",
-              "sameAs": ["https://linkedin.com/in/hft-quant"],
-            }),
-          }}
-        ></script>
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
         {children}
       </body>
     </html>

@@ -66,11 +66,11 @@ const workItems = [
     "largeImage": "/images/recent-work/fireblocks.jpg"
   },
   {
-    "title": "HFT Profits Powered",
+    "title": "On-Chain Execution — Solana",
     "description": 
-      "Our trading algorithm has achieved up to 30% profit in just one week. Harness the power of a Mean Reversion Bot built on Solana, leveraging QuickNode and Jupiter Aggregator's cutting-edge technology. The bot utilizes Jupiter's Smart Order Routing (SOR) algorithm to aggregate pricing from multiple decentralized exchanges (DEXs) and automated market makers (AMMs). Additionally, we developed a sophisticated volume bot designed to optimize trading and liquidity for newly launched tokens.",
+      "A mean-reversion execution system on Solana, built on QuickNode infrastructure and routed through Jupiter. The engine uses Jupiter's Smart Order Routing to aggregate pricing across decentralised exchanges and automated market makers, with MEV-resistant submission and slippage controls on every fill. We built the signal path, the routing layer and the reconciliation between on-chain settlement and the internal ledger.",
     "metaDescription": 
-      "Build a Mean Reversion Bot on Solana using QuickNode and Jupiter Aggregator. Mev Resistant,  Utilize Smart Order Routing (SOR) for optimal pricing across DEXs and AMMs to enhance trading efficiency.",
+      "Mean-reversion execution on Solana with QuickNode and Jupiter: MEV-resistant submission and Smart Order Routing across DEXs and AMMs, with on-chain settlement reconciled to the internal ledger.",
     "thumbnail": "/images/recent-work/quicknode.jpg",
     "largeImage": "/images/recent-work/jupiter.png"
   }

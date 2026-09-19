@@ -10,14 +10,15 @@ const Hero: React.FC = () => {
       {/* Left Column: Static Text Content */}
       <div className="flex-1 flex flex-col justify-center sm:text-center lg:text-left md:text-center animate-fade-in-left ">
         <p className="text-gray-500 text-xs mt-4 sm:text-md md:text-base lg:text-lg mb-2">
-          10 Years Supporting Every Investor, Big or Small
+          A decade engineering trading systems for institutional desks
         </p>
         <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight hover:text-primary hover:animate-hover-scale">
-          Trust Us, It&apos;s Not Just Luck in<br className="hidden sm:block" />
-          High-Frequency <br className="hidden sm:block" />Trading         </h1>
+          Ultra-Low-Latency<br className="hidden sm:block" />
+          High-Frequency Trading <br className="hidden sm:block" />Systems</h1>
         <p className="text-md sm:text-sm font-bold md:text-base lg:text-lg text-gray-600 mb-6 leading-relaxed">
-        Tired of Crossing Your Fingers?  Our Algorithms have Proven Results!  Your
-          strategies, stress-free and profit-focused.
+          From venue certification to the wire: FIX and market-data connectivity,
+          FPGA and kernel-bypass fast paths, colocation and production operations.
+          We measure the latency budget, then we cut it.
         </p>
         {/* Interactive button */}
         <HeroInteractive />
