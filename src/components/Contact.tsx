@@ -10,11 +10,6 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
-// Web3Forms access keys are client-side identifiers, not secrets — they are
-// meant to be visible in the browser. Reading it from the environment keeps it
-// out of source so it can be rotated without a code change if it gets abused.
-const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
-
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -41,48 +36,31 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // Honeypot: a real person never fills a field they cannot see.
-    const botcheck = new FormData(e.currentTarget).get("botcheck");
-    if (botcheck) {
-      // Report success to the bot and send nothing.
-      setFormStatus({ submitting: false, succeeded: true, failed: false });
-      return;
-    }
-
-    if (!ACCESS_KEY) {
-      console.error(
-        "NEXT_PUBLIC_WEB3FORMS_KEY is not set — the contact form cannot submit. See .env.example."
-      );
-      setFormStatus({ submitting: false, succeeded: false, failed: true });
-      return;
-    }
-
     setFormStatus({ submitting: true, succeeded: false, failed: false });
 
+    // The submit goes to our own route handler, which holds the Web3Forms
+    // key, enforces the honeypot and rate-limits by IP. Nothing secret is
+    // reachable from this component.
+    const botcheck = new FormData(e.currentTarget).get("botcheck");
+
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          access_key: ACCESS_KEY,
-          subject: "New enquiry from hftconsultancy.com",
-          from_name: "HFT Consultancy website",
-          ...formData,
-        }),
+        body: JSON.stringify({ ...formData, botcheck }),
       });
 
       if (!response.ok) {
-        throw new Error(`Web3Forms responded ${response.status}`);
+        throw new Error(`Contact endpoint responded ${response.status}`);
       }
 
       setFormData({ name: "", email: "", message: "" });
       setFormStatus({ submitting: false, succeeded: true, failed: false });
     } catch (error) {
-      // Never surface the raw error to the visitor — it can leak the endpoint
-      // and status codes. Log it for us, show a generic message to them.
+      // Never surface the raw error to the visitor. Log it, show a generic
+      // message with a way to reach us anyway.
       console.error("Contact form submission failed:", error);
       setFormStatus({ submitting: false, succeeded: false, failed: true });
     }
